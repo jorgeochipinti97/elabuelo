@@ -22,6 +22,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
           rel="stylesheet"
         />
+                <link rel="icon" href="/elabuelologo.png" />
+
       </head>
       <body className={inter.className}>
         <Providers>
