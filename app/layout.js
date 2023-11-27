@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { CartProvider } from "./context/cart/CartContext";
 import { usePathname } from "next/navigation";
 import { Footer } from "./components/Footer";
+import { Loader } from "./components/Loader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -30,6 +31,10 @@ export default function RootLayout({ children }) {
           <div className="">
             <Navbar />
           </div>
+
+
+          <Loader/>
+
           {children}
           <Wpp />
           <Footer />
