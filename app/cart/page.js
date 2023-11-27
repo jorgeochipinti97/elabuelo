@@ -47,7 +47,7 @@ const Page = () => {
       });
 
       const data = await response.json();
-      router.push(data.init_point);
+      data.init_point && router.push(data.init_point);
     } catch (error) {
       console.error("Error al procesar el pago:", error.message);
     }
