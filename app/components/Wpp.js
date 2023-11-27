@@ -10,7 +10,7 @@ export const Wpp = () => {
         className="md:w-12 w-12 h-12 md:h-12 custom-border-gray rounded-full  bg-lime-600 hover:bg-customDarkBg3 cursor-pointer flex justify-center items-center transition z-50"
 
       >
-        <a href={"https://wa.link/84svqe"} target="_blank">
+        <a href={"https://wa.link/fnsqvd"} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

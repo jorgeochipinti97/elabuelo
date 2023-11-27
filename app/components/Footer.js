@@ -13,7 +13,7 @@ export const Footer = () => {
     className="bg-black flex items-center justify-center flex-col py-5 pb-20 lg:pb-0"
   >
     <div class="icons">
-      <a href="#" class="icon instagram">
+      <a href="https://www.instagram.com/elabuelo.syr/" class="icon instagram">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -27,7 +27,7 @@ export const Footer = () => {
         </svg>
       </a>
 
-      <a href="#" class="icon whatsapp">
+      <a href="https://www.wa.link/fnsqvd" class="icon whatsapp">
         <svg
           viewBox="0 0 24 24"
           width={"48"}
