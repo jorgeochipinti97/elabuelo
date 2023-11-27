@@ -18,10 +18,283 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background:white
 }
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+
+.slider {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider img {
+  scroll-snap-align: center;
+}
+
+.box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url("/1.png");
+}
+
+.box:hover {
+  background-image: url("/1.png");
+ transform:scale(1);
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* components/Card.module.css */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: 'hidden';
+  z-index: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 200%; /* Large enough to allow random positioning to be visible */
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: 
+    radial-gradient(circle, #A2D2FF 20%, transparent 20%), 
+    radial-gradient(circle, #BFD8B8 20%, transparent 20%), 
+    radial-gradient(circle, #FFF3B0 20%, transparent 20%), 
+    radial-gradient(circle, #FFC8DD 20%, transparent 20%), 
+    radial-gradient(circle, #CDB4DB 20%, transparent 20%);
+  background-position:
+    10% 20%, /* You can randomize these values */
+    30% 50%,
+    50% 30%,
+    70% 80%,
+    90% 60%;
+  background-size: 10% 10%; /* This controls the size of the circles */
+  z-index: -1;
+}
+
+
+/* styles/globals.css */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 90px;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: red;
+  cursor: pointer;
+  border-radius: 90px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #444;
+  cursor: pointer;
+}
+
+
+.icon-badge-container {
+  position: relative;
+  display: inline-block;
+}
+.icon-badge-container .badge {
+  position: absolute;
+  top: -12px;
+
+  right: -4px;;
+  background-color: rgb(0, 0, 0);
+  color: #f5f5f7;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+/* Asegúrate de que el SVG no exceda el tamaño del contenedor */
+.icon-badge-container svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.menu-lateral {
+  position: fixed;
+  top: 0; /* Ajusta este valor según la distancia desde el top que deseas */
+  height: 100vh; /* Opcional: Para que el menú se extienda verticalmente */
+  z-index: 10; /* Opcional: Para asegurar que el menú se mantenga sobre otros elementos */
+}
+
+.contenedor-slider {
+
+  overflow-y: scroll;
+  height: 100vh; /* Ajusta según tu diseño */
+  /* Otros estilos como display, width, etc. */
+}
+
+.slide {
+  scroll-snap-align: start;
+  height: 100vh; /* O el alto que prefieras */
+  /* Más estilos según necesidad */
+}
+
+
+.loader {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: -32px;
+  border-radius: 50%;
+  color: black;
+  background: currentColor;
+  box-shadow: 32px 0 , -32px 0 ,  64px 0;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background:#450a0a;
+  animation: move 3s linear infinite alternate;
+}
+
+@keyframes move {
+  0% , 5%{
+    left: -32px;
+    width: 16px;
+  }
+  15% , 20%{
+    left: -32px;
+    width: 48px;
+  }
+  30% , 35%{
+    left: 0px;
+    width: 16px;
+  }
+  45% , 50%{
+    left: 0px;
+    width: 48px;
+  }
+  60% , 65%{
+    left: 32px;
+    width: 16px;
+  }
+
+  75% , 80% {
+    left: 32px;
+    width: 48px;
+  }
+  95%, 100% {
+    left: 64px;
+    width: 16px;
+  }}
+
+
+  :root {
+    --facebook: #3b5998;
+      --instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      --youtube: #FF0000;
+      --x: #333;
+      --linkedin: #0072b1;
+      --whatsapp: #25d366;
+      --tiktok: #4f4f4f;
+  }
+  
+  
+  .icons {
+    transform: scale(0.6);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .icons .icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: background-color 300ms, border-width 300ms;
+  }
+  
+  .icons .icon svg {
+    transition: transform 300ms;
+  }
+  
+  .icons .facebook {
+    --color: var(--facebook);
+  }
+  
+  .icons .instagram {
+    --color: var(--instagram);
+  }
+  
+  .icons .youtube {
+    --color: var(--youtube);
+  }
+  
+  .icons .x {
+    --color: var(--x);
+  }
+  
+  .icons .linkedin {
+    --color: var(--linkedin);
+  }
+  .icons .whatsapp {
+    --color: var(--whatsapp);
+  }
+  .icons .tiktok {
+    --color: var(--tiktok);
+  }
+  
+  .icons .icon:hover {
+    background: var(--color);
+    border-width: 1px;
+  }
+  
+  .icons .icon:hover svg {
+    transform: scale(1.1);
+  }
+  
+
