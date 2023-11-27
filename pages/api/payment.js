@@ -5,25 +5,25 @@ export default async function handler(req, res) {
     case 'POST':
       const order = req.body;
 
-      const body = {
-        items: order.orderItems.map(item => ({
-          title: item.titulo,
-          quantity: item.quantity,
-          unit_price: item.precio,
-          currency_id: 'ARS',
-        })),
-        payer: {
-          email: order.shippingAddress.email,
-        },
-        back_urls: {
-          success: 'https://tu-sitio.com/pago-exitoso',
-          failure: 'https://tu-sitio.com/pago-fallido',
-          pending: 'https://tu-sitio.com/pago-pendiente',
-        },
-        auto_return: 'approved',
-      };
-
+      
       try {
+        const body = {
+          items: order.orderItems && order.orderItems.map(item => ({
+            title: item.titulo,
+            quantity: item.quantity,
+            unit_price: item.precio,
+            currency_id: 'ARS',
+          })),
+          payer: {
+            email: order.shippingAddress.email,
+          },
+          back_urls: {
+            success: 'https://tu-sitio.com/pago-exitoso',
+            failure: 'https://tu-sitio.com/pago-fallido',
+            pending: 'https://tu-sitio.com/pago-pendiente',
+          },
+          auto_return: 'approved',
+        };
         const response = await axios.post('https://api.mercadopago.com/checkout/preferences', body, {
           headers: {
             'Content-Type': 'application/json',
