@@ -5,7 +5,6 @@ export default async function handler(req, res) {
     case 'POST':
       const order = req.body;
 
-      
       try {
         const body = {
           items: order.orderItems && order.orderItems.map(item => ({
@@ -24,16 +23,15 @@ export default async function handler(req, res) {
           },
           auto_return: 'approved',
         };
+
         const response = await axios.post('https://api.mercadopago.com/checkout/preferences', body, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer APP_USR-4057918930413722-110313-4bccb53c9b61bf172eed5962a64d5f6f-127853413`
           },
         });
-      
 
-        res.status(200).json(response.data); 
-        res.status(200).json(data);
+        res.status(200).json(response.data);
       } catch (error) {
         console.error(error);
         res.status(500).json({ error: error.message });
