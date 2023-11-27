@@ -5,7 +5,7 @@ import { ProductForm } from "../../components/ProductForm";
 import { NavbarAdmin } from "@/app/components/NavbarAdmin";
 import { useEffect } from "react";
 
-const newProduct = () => {
+const NewProduct = () => {
   useEffect(() => {
     // Esta función se ejecutará cuando se detecte un evento de rueda del mouse
     const disableScroll = (event) => {
@@ -39,4 +39,4 @@ const newProduct = () => {
   );
 };
 
-export default newProduct;
+export default NewProduct;

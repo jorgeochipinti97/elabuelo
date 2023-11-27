@@ -6,7 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
 const router = useRouter
   const [orders, setOrders] = useState([]);
   useEffect(() => {
@@ -79,4 +79,4 @@ Ver
   );
 };
 
-export default page;
+export default Page;

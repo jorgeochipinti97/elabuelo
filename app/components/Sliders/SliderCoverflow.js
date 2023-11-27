@@ -82,6 +82,7 @@ export const SliderCoverflow = () => {
           <SwiperSlide
             className="bg-slate-200 rounded-xl h-full p-4"
             style={radialStyle}
+            key={e.title}
           >
             <div className="flex lg:flex-row flex-col justify-center items-center">
               <div className="my-2 lg:my-0">

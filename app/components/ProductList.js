@@ -7,7 +7,7 @@ export const ProductList = ({ productos }) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {productos &&
         productos.map((e) => (
-          <Link href={`/productos/${e.slug}`}>
+          <Link href={`/productos/${e.slug}`} key={e.slug}>
             <div
               className="rounded-lg overflow-hidden shadow-lg flex items-end relative"
               style={{

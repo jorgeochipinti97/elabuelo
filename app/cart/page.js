@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const { createOrder, updateAddress, shippingAddress } =
     useContext(CartContext);
@@ -205,7 +205,7 @@ const page = () => {
                   <tbody className="bg-white divide-y divide-gray-200">
                     {cart &&
                       cart.map((e) => (
-                        <tr>
+                        <tr key={e.slug}>
                           <td className="lg:px-6 px-2 py-4 whitespace-nowrap">
                             <div className="flex items-center">
                               <div className="text-sm font-medium text-gray-900">
@@ -342,7 +342,7 @@ const page = () => {
           <tbody className="bg-white divide-y divide-gray-200">
             {cart &&
               cart.map((e) => (
-                <tr>
+                <tr key={e.slug}>
                   <td className="lg:px-6 px-2 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <div className="text-sm font-medium text-gray-900">
@@ -433,4 +433,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
