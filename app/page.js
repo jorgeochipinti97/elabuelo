@@ -146,7 +146,7 @@ export default function Home() {
           <SliderCoverflow />
         </div>
       </div>
-      <div className="h-screen bg-slate-50 w-screen snap-start flex-col flex justify-start pt-10 items-center">
+      <div className="min-h-screen bg-slate-50 w-screen snap-start flex-col flex justify-start pt-10 items-center">
         <span className="loader lg:mt-0" />
         <div className="mt-0 lg:mt-5">
           <p className=" text-3xl mt-3 lg:text-5xl font-bold text-slate-800">
@@ -169,7 +169,7 @@ export default function Home() {
         </div>
       </div>
       <main
-        className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-slate-900 lg:h-screen"
+        className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-slate-900 "
         style={{
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
