@@ -53,7 +53,7 @@ export const Footer = () => {
         </svg>
       </a>
 
-      <a href="#" class="icon tiktok ">
+      <a href="https://www.tiktok.com/@elabuelocolchones" class="icon tiktok ">
         <svg
           fill="#ffffff"
           height="48"
