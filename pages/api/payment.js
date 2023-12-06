@@ -17,9 +17,9 @@ export default async function handler(req, res) {
             email: order.shippingAddress.email,
           },
           back_urls: {
-            success: 'https://tu-sitio.com/pago-exitoso',
-            failure: 'https://tu-sitio.com/pago-fallido',
-            pending: 'https://tu-sitio.com/pago-pendiente',
+            success: `https://elabuelo.shop/pago/${order._id}`,
+            failure: 'https://elabuelo.shop',
+            pending: 'https://elabuelo.shop',
           },
           auto_return: 'approved',
         };

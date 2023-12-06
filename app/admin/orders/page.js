@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Page = () => {
-const router = useRouter
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     getOrders();
@@ -16,6 +15,7 @@ const router = useRouter
   const getOrders = async () => {
     const orders_ = await axios.get("/api/orders");
     setOrders(orders_.data);
+    console.log(orders_)
   };
 
   return (
@@ -29,7 +29,7 @@ const router = useRouter
               <th className="text-black">Numero de Orden</th>
               <th className="text-black">Nombre</th>
               <th className="text-center text-black">ciudad</th>
-              <th className="text-center text-black">email</th>
+              <th className="text-center text-black">-</th>
               <th className="text-center text-black">Total</th>
 
               <th className="text-center text-black ">
@@ -60,7 +60,7 @@ const router = useRouter
                     <p className="text-slate-800 text-center my-5">{e.shippingAddress.city}</p>
                   </td>
                   <td className="">
-                    <p className="text-slate-800 text-center my-5">{e.shippingAddress.email}</p>
+                    <p className="text-slate-800 text-center my-5">{e.isPaid}</p>
                   </td>
                   <td className="">
                     <p className="text-slate-800 text-center my-5">{formattwo(e.total)}</p>
