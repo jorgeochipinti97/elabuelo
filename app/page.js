@@ -120,7 +120,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h2 className="text-center text-md mt-10  lg:text-xl text-slate-700 font-extralight">
+          <h2 className="text-center text-md lg:mt-10 mt-2  lg:text-xl text-slate-700 font-extralight">
             <span className="font-semibold">30%</span> de{" "}
             <span className="font-light">descuento</span> en efectivo,{" "}
             <span className="font-semibold"> listo para vos.</span>
@@ -131,7 +131,7 @@ export default function Home() {
         className="flex justify-start items-start  w-screen bg-slate-950 h-screen"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="mx-auto w-screen pt-28 ">
+        <div className="mx-auto w-screen lg:pt-28 pt-5 ">
           <h2 className="text-5xl text-white font-bold text-center mb-5">
             Somos fabricantes
           </h2>
